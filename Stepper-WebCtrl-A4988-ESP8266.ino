@@ -3,8 +3,8 @@
 #include <ESPAsyncWebServer.h>
 #include "A4988.h"
 
-const char* ssid = "Zakaria"; // Replace with your SSID
-const char* password = "itrust7078"; // Replace with your Wi-Fi password
+const char* ssid = "you_ssid"; // Replace with your SSID
+const char* password = "you_password"; // Replace with your Wi-Fi password
 
 AsyncWebServer server(80);
 
