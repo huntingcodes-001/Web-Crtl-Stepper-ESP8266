@@ -3,8 +3,8 @@
 #include <ESPAsyncWebServer.h>
 #include "A4988.h"
 
-const char* ssid = "Zakaria"; // Replace with your SSID
-const char* password = "itrust7078"; // Replace with your Wi-Fi password
+const char* ssid = "your_ssid"; // Replace with your SSID
+const char* password = "your_password"; // Replace with your Wi-Fi password
 
 AsyncWebServer server(80);
 
@@ -34,32 +34,11 @@ void handleRoot(AsyncWebServerRequest *request) {
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
-        body {
-          font-family: Arial, sans-serif;
-          text-align: center;
-          margin-top: 50px;
-          background-color: #f4f4f4;
-        }
-        h1 {
-          color: #333;
-        }
         button {
+          width: 150px;
           height: 50px;
           font-size: 20px;
           margin: 10px;
-          background-color: #4CAF50;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-          box-sizing: border-box;
-        }
-        button:hover {
-          background-color: #45a049;
-        }
-        #btnCW.active, #btnCCW.active {
-          background-color: #f44336;
         }
       </style>
     </head>
@@ -73,39 +52,34 @@ void handleRoot(AsyncWebServerRequest *request) {
           xhr.open('GET', endpoint, true);
           xhr.send();
           
+          // Toggle button text after request is sent
           if (endpoint === '/clockwise') {
             var btnCW = document.getElementById('btnCW');
             btnCW.innerHTML = 'Stop';
-            btnCW.classList.add('active');
             btnCW.setAttribute('onclick', "sendRequest('/stop')");
             
             var btnCCW = document.getElementById('btnCCW');
             btnCCW.innerHTML = 'Counterclockwise';
-            btnCCW.classList.remove('active');
             btnCCW.setAttribute('onclick', "sendRequest('/counterclockwise')");
           }
           
           if (endpoint === '/counterclockwise') {
             var btnCCW = document.getElementById('btnCCW');
             btnCCW.innerHTML = 'Stop';
-            btnCCW.classList.add('active');
             btnCCW.setAttribute('onclick', "sendRequest('/stop')");
             
             var btnCW = document.getElementById('btnCW');
             btnCW.innerHTML = 'Clockwise';
-            btnCW.classList.remove('active');
             btnCW.setAttribute('onclick', "sendRequest('/clockwise')");
           }
           
           if (endpoint === '/stop') {
             var btnCW = document.getElementById('btnCW');
             btnCW.innerHTML = 'Clockwise';
-            btnCW.classList.remove('active');
             btnCW.setAttribute('onclick', "sendRequest('/clockwise')");
             
             var btnCCW = document.getElementById('btnCCW');
             btnCCW.innerHTML = 'Counterclockwise';
-            btnCCW.classList.remove('active');
             btnCCW.setAttribute('onclick', "sendRequest('/counterclockwise')");
           }
         }
