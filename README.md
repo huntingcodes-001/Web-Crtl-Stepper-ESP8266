@@ -9,6 +9,8 @@ Using the above code and the following components:-
 
 You can easily control the rotational aspect of the stepper motor, i.e. clockwise and counterclockwise movement.
 
+File 1 is without styling, File 2 is with a bit of styling
+
 This code has been tested and deployed miltiple time, so if you're encountering any compiling related issues, make sure you install all the lib and board managers properly.
 
 For further assistance, you can contact me:- +91 9892977581
