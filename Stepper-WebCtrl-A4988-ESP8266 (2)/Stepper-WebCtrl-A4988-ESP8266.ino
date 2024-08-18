@@ -3,8 +3,13 @@
 #include <ESPAsyncWebServer.h>
 #include "A4988.h"
 
+<<<<<<< HEAD:Stepper-WebCtrl-A4988-ESP8266 (2)/Stepper-WebCtrl-A4988-ESP8266.ino
 const char* ssid = "your_ssid"; // Replace with your SSID
 const char* password = "your_password"; // Replace with your Wi-Fi password
+=======
+const char* ssid = "you_ssid"; // Replace with your SSID
+const char* password = "you_password"; // Replace with your Wi-Fi password
+>>>>>>> 9b516b3b4ce9fd187030a49c6effd67965dd714a:Stepper-WebCtrl-A4988-ESP8266.ino
 
 AsyncWebServer server(80);
 
