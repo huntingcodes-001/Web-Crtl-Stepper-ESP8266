@@ -18,3 +18,4 @@ For further assistance, you can contact me:- +91 9892977581
 Make connections according to the following circuit diagram:-
 
 ![image](https://github.com/user-attachments/assets/c3186100-0d44-43ff-aa7a-3ecd5b5f469e)
+![edfgh](https://github.com/user-attachments/assets/0eb42caa-a983-4e33-b22b-e87a225ec2ce)
